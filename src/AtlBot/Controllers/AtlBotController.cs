@@ -69,7 +69,7 @@ namespace AtlBot.Controllers
                     foreach (var e in t.Exception.InnerExceptions)
                     {
                         // log it
-                        System.Diagnostics.Trace.WriteLine(e.Message);
+                        System.Diagnostics.Trace.TraceError(e.Message);
                     }
                 }, TaskContinuationOptions.OnlyOnFaulted);
         }
